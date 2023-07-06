@@ -1,63 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALL-IN</title>
-    <link rel="stylesheet" href="style2.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">ALL-IN</h1>
-                <ul class="menu">
-                    <li><a href="#prize">Get Prizes</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="#create">Create</a></li>
-                </ul>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ALL-IN</title>
+        <link rel="stylesheet" href="style2.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="header">
+                    <h1 class="logo">KOLEKSIKU</h1>
+                    <ul class="menu">
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#create">Create</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div
+                id="carouselExample"
+                class="carousel slide"
+                data-bs-ride="carousel"
+            >
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img
+                            src="https://im.uniqlo.com/global-cms/spa/resec3293730ed3ce6b32231d87c95885e3fr.jpg"
+                            class="d-block w-100"
+                            alt="Slide 1"
+                        />
+                        <div class="carousel-caption">
+                            <h2>Welcome to KOLEKSIKU</h2>
+                            <p>
+                                Discover the latest trends in fashion and shop
+                                for your favorite clothing items.
+                            </p>
+                            <a href="#products">
+                                <button
+                                    href="#products"
+                                    class="btn"
+                                    style="
+                                        font-weight: bold;
+                                        font-size: 40px;
+                                        width: 400px;
+                                        margin: 0 auto;
+                                    "
+                                >
+                                Shop Now
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://im.uniqlo.com/global-cms/spa/res370771e85cc226de210e6400dab183b3fr.jpg"
+                            class="d-block w-100"
+                            alt="Slide 2"
+                        />
+                        <div class="carousel-caption">
+                            <h2>Welcome to KOLEKSIKU</h2>
+                            <p>
+                                Explore our wide range of fashion products and
+                                accessories.
+                            </p>
+                            <a href="#products">
+                                <button
+                                    href="#products"
+                                    class="btn"
+                                    style="
+                                        font-weight: bold;
+                                        font-size: 40px;
+                                        width: 400px;
+                                        margin: 0 auto;
+                                    "
+                                >
+                                Shop Now
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img
+                            src="https://im.uniqlo.com/global-cms/spa/res664119b1f19ea4f3f314d01bd83f97c0fr.jpg"
+                            class="d-block w-100"
+                            alt="Slide 2"
+                        />
+                        <div class="carousel-caption">
+                            <h2>Welcome to KOLEKSIKU</h2>
+                            <p>
+                                Explore our wide range of fashion products and
+                                accessories.
+                            </p>
+                            <a href="#products">
+                                <button
+                                    href="#products"
+                                    class="btn"
+                                    style="
+                                        font-weight: bold;
+                                        font-size: 40px;
+                                        width: 400px;
+                                        margin: 0 auto;
+                                    "
+                                >
+                                Shop Now
+                                </button>
+                            </a>
+                            <!-- <a href="#products" class="btn">Shop Now</a> -->
+                        </div>
+                    </div>
+                    <!-- Add more carousel items as needed -->
+                </div>
             </div>
-        </nav>
-        <div class="hero">
+        </header>
+
+        <section id="products">
             <div class="container">
-                <h2>Welcome to ALL-IN</h2>
-                <p>Discover the latest trends in fashion and shop for your favorite clothing items.</p>
-                <a href="#products" class="btn">Shop Now</a>
+                <h2>Featured Products</h2>
             </div>
-        </div>
-    </header>
-    
-    <section id="prize">
-        <div class="container">
-            <h2>Get Prizes</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse dapibus ipsum eget ligula euismod, id iaculis mauris convallis. Proin finibus vestibulum lacinia.</p>
-        </div>
-    </section>
-    
-    <section id="products">
-        <div class="container">
-            <h2>Featured Products</h2>
-        </div>
-    </section>
-    
-    <section id="create">
-        <div class="container">
-            <h2>Create Product</h2>
-            <form id="myForm" onsubmit="handleSubmit(event)">
-                <input id="name" type="text" placeholder="Product Name">
-                <input id="price" type="number" placeholder="Product Price">
-                <input id="link" type="text" placeholder="Product Image Link">
-                
-                <button type="submit" class="button" value="upload">Create Product</button>
-            </form>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 ALL-IN. All rights reserved.</p>
-        </div>
-    </footer>
-</body>
-<script src="index2.js"></script>
+        </section>
+
+        <section id="create">
+            <div class="container">
+                <h2>Create Product</h2>
+                <form id="myForm" onsubmit="handleSubmit(event)">
+                    <input id="name" type="text" placeholder="Product Name" />
+                    <input
+                        id="price"
+                        type="number"
+                        placeholder="Product Price"
+                    />
+                    <input
+                        id="link"
+                        type="text"
+                        placeholder="Product Image Link"
+                    />
+
+                    <button type="submit" class="button" value="upload">
+                        Create Product
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2023 KOLEKSIKU. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+    <script src="index2.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </html>
