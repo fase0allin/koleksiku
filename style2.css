@@ -25,8 +25,11 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: bold;
+    color: rgb(79, 79, 224);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black; 
 }
 
 .menu {
@@ -36,11 +39,11 @@ header {
 
 .menu li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 60px;
 }
 
 .menu li a {
-    color: #fff;
+    color: rgb(79, 79, 224);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -169,16 +172,25 @@ header {
 }
 
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
+    /* display: inline-block; */
+    /* padding: 10px 20px;  */
+    /* background-color: #333; */
     color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; 
+    width: 100%;
+    background-color: black;
 }
+
 
 .btn:hover {
     background-color: #555;
+}
+
+.btn-shop {
+    color: #fff;
+    text-decoration: none;
+    border: none;
 }
 
 /* prize Section Styles */
@@ -215,7 +227,11 @@ section#products h2 {
     margin-bottom: 30px;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
+    border-radius: 17px;
+    background: #e0e0e0;
+    box-shadow:  26px 26px 51px #c5c5c5,
+                -26px -26px 51px #fbfbfb;
 }
 
 .product img {
@@ -258,17 +274,22 @@ section#create textarea {
     margin-bottom: 20px;
     padding: 10px;
     font-size: 16px;
+    border-radius: 50px;
 }
 
 section#create button {
     display: block;
     width: 100%;
     padding: 10px 20px;
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     font-size: 16px;
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     transition: background-color 0.3s ease;
+    border-radius: 50px;
+    background: #a1a1a1;
+    box-shadow:  20px 20px 60px #898989,
+                -20px -20px 60px #b9b9b9;
 }
 
 section#create button:hover {

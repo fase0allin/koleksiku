@@ -178,7 +178,8 @@ function createProductTemplate(product) {
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>Rp ${product.price}</p>
-            <a href="#" class="btn" onclick="deleteProduct('${product.id}')">Delete</a>
+            <button class="btn" style="color: white; border-radius: 50px;background: #808080;box-shadow: inset 20px 20px 60px #6d6d6d,
+            inset -20px -20px 60px #939393;" onclick="deleteProduct('${product.id}')">Delete</button>
         </div>
     `;
 }
