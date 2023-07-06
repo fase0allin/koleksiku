@@ -169,7 +169,7 @@ let cart = [
 // }
 
 // Get the container element for featured products
-const productsContainer = document.querySelector('#products .container');
+const productsContainer = document.querySelector("#products .container");
 
 // Function to create the HTML template for a product
 function createProductTemplate(product) {
@@ -178,15 +178,22 @@ function createProductTemplate(product) {
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
             <p>Rp ${product.price}</p>
-            <a href="#" class="btn">Add to Cart</a>
+            <a href="#" class="btn" onclick="deleteProduct('${product.id}')">Delete</a>
         </div>
     `;
+}
+
+function deleteProduct(id) {
+    console.log(id);
+    catalog = catalog.filter((item) => item.id !== Number(id));
+    console.log(catalog);
+    displayProducts();
 }
 
 // Function to display the products in the featured products section
 function displayProducts() {
     // Clear the existing content
-    productsContainer.innerHTML = '';
+    productsContainer.innerHTML = "";
 
     // Iterate over the catalog and create the product templates
     for (let i = 0; i < catalog.length; i++) {
@@ -198,7 +205,6 @@ function displayProducts() {
 
 // Call the displayProducts function to populate the featured products section
 displayProducts();
-
 
 // const parentElement = document.getElementById("container");
 
@@ -235,30 +241,30 @@ function handleSubmit(event) {
     event.preventDefault(); // Prevent the form from submitting and refreshing the page
 
     // Retrieve form input values
-    const nameInput = document.getElementById('name');
-    const priceInput = document.getElementById('price');
-    const linkInput = document.getElementById('link');
+    const nameInput = document.getElementById("name");
+    const priceInput = document.getElementById("price");
+    const linkInput = document.getElementById("link");
 
     // Create a new object and assign input values to properties
 
     const newObj = {
-        id: catalog.length-1,
+        id: catalog.length - 1,
         name: nameInput.value,
         price: parseInt(priceInput.value),
         image: linkInput.value,
         hover: linkInput.value,
         quantity: 0,
-        rating: 0
-    }
+        rating: 0,
+    };
 
     // Push the object to the array
     catalog.unshift(newObj);
 
     // Reset the form
-    document.getElementById('myForm').reset();
+    document.getElementById("myForm").reset();
 
     // Perform any additional operations with the array of objects
     console.log(catalog);
-    
+
     displayProducts();
-  }
+}
