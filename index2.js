@@ -83,95 +83,49 @@ let catalog = [
 ];
 
 const parentElement = document.getElementById("container");
-let cart = [
-    {
-        name: "baju5",
-        price: 45000,
-        image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
-        hover: "",
-        quantity: 0,
-    },
-    {
-        name: "baju5",
-        price: 45000,
-        image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
-        hover: "",
-        quantity: 0,
-    },
-    {
-        name: "baju5",
-        price: 45000,
-        image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
-        hover: "",
-        quantity: 0,
-    },
-    {
-        name: "baju5",
-        price: 45000,
-        image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
-        hover: "",
-        quantity: 0,
-    },
-    {
-        name: "baju5",
-        price: 45000,
-        image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
-        hover: "",
-        quantity: 0,
-    },
-];
+// let cart = [
+//     {
+//         name: "baju5",
+//         price: 45000,
+//         image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
+//         hover: "",
+//         quantity: 0,
+//     },
+//     {
+//         name: "baju5",
+//         price: 45000,
+//         image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
+//         hover: "",
+//         quantity: 0,
+//     },
+//     {
+//         name: "baju5",
+//         price: 45000,
+//         image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
+//         hover: "",
+//         quantity: 0,
+//     },
+//     {
+//         name: "baju5",
+//         price: 45000,
+//         image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
+//         hover: "",
+//         quantity: 0,
+//     },
+//     {
+//         name: "baju5",
+//         price: 45000,
+//         image: "https://oxfoord.id/wp-content/uploads/2022/10/SHIRT-13A-NEW-247x296.jpg",
+//         hover: "",
+//         quantity: 0,
+//     },
+// ];
 
-// for (let i = 0; i < catalog.length; i++) {
-//     const card = document.createElement("div");
-//     card.classList.add("test");
 
-//     const image = document.createElement("img");
-//     image.src = catalog[i].image;
-//     image.alt = catalog[i].name;
-//     card.appendChild(image);
-
-//     // name section
-//     const nameSection = document.createElement("div");
-//     nameSection.classList.add("name");
-
-//     const itemName = document.createElement("p");
-//     itemName.textContent = `${catalog[i].name} |`;
-
-//     const ratingImage = document.createElement("img");
-//     ratingImage.src = "./assets/stars.png";
-
-//     const rating = document.createElement("p");
-//     rating.textContent = catalog[i].rating;
-
-//     nameSection.appendChild(itemName);
-//     nameSection.appendChild(ratingImage);
-//     nameSection.appendChild(rating);
-
-//     card.appendChild(nameSection);
-
-//     const price = document.createElement("p");
-//     price.textContent = `Harga : Rp. ${catalog[i].price},00`;
-
-//     card.appendChild(price);
-
-//     // cart section
-//     const cartSection = document.createElement("div");
-//     cartSection.classList.add("cart");
-
-//     const addToCart = document.createElement("button");
-//     addToCart.textContent = "Add to Cart";
-
-//     cartSection.appendChild(addToCart);
-
-//     card.appendChild(cartSection);
-
-//     parentElement.appendChild(card);
-// }
-
-// Get the container element for featured products
+// ngambil elemen container dari products
 const productsContainer = document.querySelector("#products .container");
 
-// Function to create the HTML template for a product
+// bikin template html
 function createProductTemplate(product) {
     return `
         <div class="product">
@@ -191,12 +145,12 @@ function deleteProduct(id) {
     displayProducts();
 }
 
-// Function to display the products in the featured products section
+// ngerender products
 function displayProducts() {
-    // Clear the existing content
+    //reset products
     productsContainer.innerHTML = "";
 
-    // Iterate over the catalog and create the product templates
+    // akses katalog dan create produk
     for (let i = 0; i < catalog.length; i++) {
         const product = catalog[i];
         const productTemplate = createProductTemplate(product);
@@ -204,49 +158,31 @@ function displayProducts() {
     }
 }
 
-// Call the displayProducts function to populate the featured products section
 displayProducts();
 
-// const parentElement = document.getElementById("container");
 
-// for (let i = 0; i < catalog.length; i++) {
-//     const card = document.createElement("div");
-//     card.classList.add("test");
+// const windowPop = document.getElementById("cartdiv");
+// windowPop.style.display = "none";
 
-//     // Create an image element
-//     const image = document.createElement("img");
-//     image.src = catalog[i].image;
-//     image.alt = catalog[i].name;
-
-//     // Append the image to the card
-//     card.appendChild(image);
-
-//     // Append the card to the parent element
-//     parentElement.appendChild(card);
+// function toggleCart() {
+//     windowPop.style.display = "";
 // }
 
-const windowPop = document.getElementById("cartdiv");
-windowPop.style.display = "none";
-
-function toggleCart() {
-    windowPop.style.display = "";
-}
-
-function clickClose() {
-    windowPop.style.display = "none";
-}
+// function clickClose() {
+//     windowPop.style.display = "none";
+// }
 
 //----------function form----------
 
 function handleSubmit(event) {
-    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+    event.preventDefault(); 
 
-    // Retrieve form input values
+    // ambil value
     const nameInput = document.getElementById("name");
     const priceInput = document.getElementById("price");
     const linkInput = document.getElementById("link");
 
-    // Create a new object and assign input values to properties
+    // bikin obj baru utk database
 
     const newObj = {
         id: catalog.length - 1,
@@ -255,16 +191,13 @@ function handleSubmit(event) {
         image: linkInput.value,
         hover: linkInput.value,
         quantity: 0,
-        rating: 0,
+        rating: 5,
     };
 
-    // Push the object to the array
     catalog.unshift(newObj);
 
-    // Reset the form
     document.getElementById("myForm").reset();
 
-    // Perform any additional operations with the array of objects
     console.log(catalog);
 
     displayProducts();
